@@ -1,0 +1,4 @@
+*.ignore
+appConfig.ini
+*~
+*.log
