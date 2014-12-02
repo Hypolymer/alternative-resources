@@ -1,10 +1,10 @@
    <?php
-   
+
    require_once('vendor/autoload.php');
 
    $filename = "appConfig.ini";
    $ini_array = parse_ini_file ($filename);
-   
+
    use OCLC\Auth\WSKey;
    use OCLC\Auth\AccessToken;
    use WorldCat\Discovery\Bib;
@@ -25,21 +25,43 @@
    #   $array = file_get_contents("http://xisbn.worldcat.org/webservices/xid/isbn/181516677?method=getEditions&format=xml&fl=*");
    #   echo $array;
    } else {
-		echo "json list of xID OCLC Num";
-		echo "</br><br/>";
-		$array = file_get_contents("http://xisbn.worldcat.org/webservices/xid/oclcnum/586757123?method=getVariants&format=json&fl=oclcnum");
-		echo $array;
-		echo "<br/><br/>";
-		echo "json list of xISBN";
-		echo "<br/></br>";
-		$xISBN_array = array(file_get_contents("http://xisbn.worldcat.org/webservices/xid/isbn/9780439023528?method=getEditions&format=xml&fl=*"));
+		// echo "json list of xID OCLC Num";
+		// echo "</br><br/>";
+		// $array = file_get_contents("http://xisbn.worldcat.org/webservices/xid/oclcnum/586757123?method=getVariants&format=json&fl=oclcnum");
+		// echo $array;
+		// echo "<br/><br/>";
+		// echo "Now XML for ISXN";
+		// echo "<br/></br>";
+
+    $response_xml_data = file_get_contents("http://xisbn.worldcat.org/webservices/xid/isbn/9780439023528?method=getEditions&format=xml&fl=*");
+    if($response_xml_data)
+    {
+      echo "read";
+      $data = simplexml_load_string($response_xml_data);
+      //var_dump($data);
+      print_r($data->isbn);
+      $listIsbn = $data->isbn;
+      foreach($listIsbn as $item)
+      {
+        echo "Value: $item<br />\n";
+      }
+    }
+
+
+
+
+
+		$xISBN_array = array("a","b","c");#array(file_get_contents("http://xisbn.worldcat.org/webservices/xid/isbn/9780439023528?method=getEditions&format=xml&fl=*"));
 		if ($xISBN_array == "") {
 			echo "no results";
 			}
 		else {
-        while (list(, $value) = each($xISBN_array)) {
-			echo $value;
+        foreach ($xISBN_array as $item)
+        {
+          echo "Value: $item<br />\n";
+        }
+        echo "This ran </br>";
 }
       }
-   }
+
 ?>
