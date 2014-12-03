@@ -1,5 +1,9 @@
    <?php
 
+   class test extends holdingsFinder {
+   
+   function tester (){
+   
    require_once('vendor/autoload.php');
 
    $configFile = "appConfig.ini";
@@ -84,5 +88,9 @@ foreach ($xml->children() as $second_gen) {
         echo "This ran </br>";
 }
       }
-
+	  require 'getHoldings.php';
+	  holdingsFinder->getHoldings(9780439023528);
+	  
+}
+}
 ?>
