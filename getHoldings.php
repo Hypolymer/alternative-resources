@@ -6,8 +6,8 @@
 	use OCLC\Auth\AccessToken;
 	use WorldCat\Discovery\Offer;
 	
-	$filename = "appConfig.ini";
-	$ini_array = parse_ini_file ($filename);
+	$configFile = "appConfig.ini";
+	$ini_array = parse_ini_file ($configFile);
    
 	$holdingsList = "holdingsList.ini";
 	$ini_holdings = parse_ini_file($holdingsList);

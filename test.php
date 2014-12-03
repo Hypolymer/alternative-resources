@@ -2,8 +2,8 @@
 
    require_once('vendor/autoload.php');
 
-   $filename = "appConfig.ini";
-   $ini_array = parse_ini_file ($filename);
+   $configFile = "appConfig.ini";
+   $ini_array = parse_ini_file ($configFile);
 
    use OCLC\Auth\WSKey;
    use OCLC\Auth\AccessToken;
@@ -18,6 +18,33 @@
 
    $bib = Bib::Find(586757123, $accessToken);
 
+   
+$xml = new SimpleXMLElement(
+'<person>
+ <child role="son">
+  <child role="daughter"/>
+ </child>
+ <child role="daughter">
+  <child role="son">
+   <child role="son"/>
+  </child>
+ </child>
+</person>');
+
+foreach ($xml->children() as $second_gen) {
+    echo ' The person begot a ' . $second_gen['role'];
+
+    foreach ($second_gen->children() as $third_gen) {
+        echo ' who begot a ' . $third_gen['role'] . ';';
+
+        foreach ($third_gen->children() as $fourth_gen) {
+            echo ' and that ' . $third_gen['role'] .
+                ' begot a ' . $fourth_gen['role'];
+        }
+    }
+}
+
+   
    if (is_a($bib, 'WorldCat\Discovery\Error')) {
        echo $bib->getErrorCode();
        echo $bib->getErrorMessage();
@@ -46,12 +73,6 @@
         echo "Value: $item<br />\n";
       }
     }
-
-
-
-
-
-		$xISBN_array = array("a","b","c");#array(file_get_contents("http://xisbn.worldcat.org/webservices/xid/isbn/9780439023528?method=getEditions&format=xml&fl=*"));
 		if ($xISBN_array == "") {
 			echo "no results";
 			}
