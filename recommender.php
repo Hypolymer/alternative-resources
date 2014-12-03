@@ -15,19 +15,20 @@
 	$wskey = new WSKey($key, $secret, $options);
 	$accessToken = $wskey->getAccessTokenWithClientCredentials($institution_id, $institution_id);
 	
-	$bib = "";
-	$query = 'name:hunger';
-
-$results = Bib::Search($query, $accessToken);
-if (is_a($bib, 'WorldCat\Discovery\Error')) {
-   echo $results->getErrorCode();
-   echo $results->getErrorMessage();
-} else {
-   foreach ($results->getSearchResults() as $bib){
-      echo $bib->getName()->getValue();
-      echo ($bib->getDatePublished() ?  ' ' . $bib->getDatePublished()->getValue()  : '');
-	  echo "<br/><br/>";
-	  ;
-   }
-   }
+	$recommend = file_get_contents("http://experimental.worldcat.org/recommender/YGM/978-0316769532");
+	echo $recommend;
+	
+	$response_xml_data = file_get_contents("http://experimental.worldcat.org/recommender/YGM/978-0316769532");
+    if($response_xml_data)
+    {
+      echo "read";
+      $data = simplexml_load_string($response_xml_data);
+      var_dump($data);
+      print_r($data->isbn);
+      $listIsbn = $data->isbn;
+      foreach($listIsbn as $item)
+      {
+        echo "Value: $item<br />\n";
+      }
+ 
 ?>

@@ -38,7 +38,12 @@
 		echo "<b>Format:</b> " . $manipulate_schema . "<br/>";
 
 		foreach ($offers as $offer) {
-			echo $offer->getSeller()->getName() . "<br/>";
+
+			$instURI = $offer->getItemOffered()->getCollection()->getURI();
+
+			//echo preg_replace('/^.*\/\s*/', '', $instURI) . "<br/>";
+			
+			echo $offer->getItemOffered()->getCollection()->getOCLCSymbol() . "<br/>";
    }
 }
 
