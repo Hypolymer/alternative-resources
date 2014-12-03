@@ -18,16 +18,15 @@
 	$bib = "";
 	$query = 'name:hunger';
 
-$results = Bib::Search($query, $accessToken);
-if (is_a($bib, 'WorldCat\Discovery\Error')) {
-   echo $results->getErrorCode();
-   echo $results->getErrorMessage();
-} else {
-   foreach ($results->getSearchResults() as $bib){
-      echo $bib->getName()->getValue();
-      echo ($bib->getDatePublished() ?  ' ' . $bib->getDatePublished()->getValue()  : '');
-	  echo "<br/><br/>";
-	  ;
-   }
-   }
+	$results = Bib::Search($query, $accessToken);
+	if (is_a($bib, 'WorldCat\Discovery\Error')) {
+		echo $results->getErrorCode();
+   		echo $results->getErrorMessage();
+	} else {
+   		foreach ($results->getSearchResults() as $bib){
+      			echo $bib->getName()->getValue();
+      			echo ($bib->getDatePublished() ?  ' ' . $bib->getDatePublished()->getValue()  : '');
+	  		echo "<br/><br/>";
+   		}
+   	}
 ?>
