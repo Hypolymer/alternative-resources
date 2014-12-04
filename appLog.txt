@@ -128,3 +128,27 @@
 2014-12-04 20:00:52  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
 2014-12-04 20:00:57  1
 2014-12-04 20:00:57  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 20:07:14  1
+2014-12-04 20:07:14  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 20:07:22  1
+2014-12-04 20:07:22  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 21:02:01  1
+2014-12-04 21:02:01  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 21:02:06  1
+2014-12-04 21:02:06  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 21:04:15  1
+2014-12-04 21:04:15  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 21:05:39  1
+2014-12-04 21:05:39  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 21:05:48  1
+2014-12-04 21:05:48  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 21:05:50  1
+2014-12-04 21:05:50  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 21:06:24  1
+2014-12-04 21:06:24  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 21:06:27  1
+2014-12-04 21:06:27  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 21:10:48  1
+2014-12-04 21:10:48  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-04 21:10:50  1
+2014-12-04 21:10:50  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45

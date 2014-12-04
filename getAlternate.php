@@ -77,6 +77,11 @@ else
     }
 }
 
+echo $workID;
+
+$workDetails = json_decode(file_get_contents($workID . ".jsonld"));
+var_dump($workDetails);
+echo $workDetails->workExample;
 
 ?>
 
