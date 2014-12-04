@@ -198,49 +198,6 @@
         ]
     },
     {
-        "name": "worldcat/discovery",
-        "version": "0.13.0",
-        "version_normalized": "0.13.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/OCLC-Developer-Network/worldcat-discovery-php.git",
-            "reference": "d727baf39e9237bccf59c67399811edca5383b4d"
-        },
-        "require": {
-            "easyrdf/easyrdf": "*",
-            "ext-curl": "*",
-            "ext-json": "*",
-            "ext-openssl": "*",
-            "guzzle/guzzle": ">=3.7.0,<3.9.0",
-            "lib-curl": "*",
-            "lib-openssl": "*",
-            "oclc/auth": "*",
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "php-vcr/php-vcr": "dev-master",
-            "php-vcr/phpunit-testlistener-vcr": "*",
-            "phpdocumentor/phpdocumentor": "2.*",
-            "phpunit/phpunit": "~3",
-            "zendframework/zend-log": "2.0.*"
-        },
-        "time": "2014-11-26 19:18:44",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "WorldCat\\Discovery\\": "src/"
-            }
-        },
-        "license": [
-            "Apache-2.0"
-        ],
-        "description": "Library to interact with OCLC's WorldCat Discovery Web Services",
-        "keywords": [
-            "OCLC"
-        ]
-    },
-    {
         "name": "symfony/event-dispatcher",
         "version": "v2.6.1",
         "version_normalized": "2.6.1.0",
@@ -299,5 +256,48 @@
         ],
         "description": "Symfony EventDispatcher Component",
         "homepage": "http://symfony.com"
+    },
+    {
+        "name": "worldcat/discovery",
+        "version": "0.14.0",
+        "version_normalized": "0.14.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/OCLC-Developer-Network/worldcat-discovery-php.git",
+            "reference": "05f15ed456f2f8a04415879b2d6fa1dfcc417c5a"
+        },
+        "require": {
+            "easyrdf/easyrdf": "*",
+            "ext-curl": "*",
+            "ext-json": "*",
+            "ext-openssl": "*",
+            "guzzle/guzzle": ">=3.7.0,<3.9.0",
+            "lib-curl": "*",
+            "lib-openssl": "*",
+            "oclc/auth": "*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "php-vcr/php-vcr": "dev-master",
+            "php-vcr/phpunit-testlistener-vcr": "*",
+            "phpdocumentor/phpdocumentor": "2.*",
+            "phpunit/phpunit": "~3",
+            "zendframework/zend-log": "2.0.*"
+        },
+        "time": "2014-12-04 18:34:21",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "WorldCat\\Discovery\\": "src/"
+            }
+        },
+        "license": [
+            "Apache-2.0"
+        ],
+        "description": "Library to interact with OCLC's WorldCat Discovery Web Services",
+        "keywords": [
+            "OCLC"
+        ]
     }
 ]
