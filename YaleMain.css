@@ -1,0 +1,851 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+/*/////////////////////////////////////////////////////////////
+/ General//////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+
+html
+	{
+	/*font-size:81%;*/
+	font-size:13px;
+	}
+
+h1
+	{
+	font-family: "YaleDesign",Georgia,"Times New Roman",serif;
+	font-szie: 17px;
+	font-size: 1.3rem;
+	font-weight: normal;
+	text-transform:uppercase;
+	color: #FFFFFF;
+	background: url("http://www.library.yale.edu/sites/all/themes/yul/images/title_yale_blue.png") repeat-y scroll left top rgb(15, 77, 146);
+	padding: 1px 10px 1px 15px;
+	height: auto;
+	vertical-align: middle;
+	letter-spacing: 1px;
+	margin-top:10px;
+	}
+	
+	#statuslinediv
+	{
+	    
+	    background:orange;
+	    padding-top:15px;
+	    padding-bottom:15px;
+	    text-align:center;
+		font-size:17px;
+	    font-size:1.3rem;
+	}
+
+	.titlespan
+{
+    background: none;
+	font-size: 26px;
+    font-size: 2.0rem;
+    font-family: "YaleDesign",Georgia,"Times New Roman",Times,serif;
+    color: #0f4d92;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width:100%;
+    display:block;
+	
+}
+
+a.offsite:link, .offsite
+{
+    padding-right: 16px;
+    background: transparent url("images/aoutside.gif") no-repeat 100%;
+	/*background: transparent url("images/Icon_External_Link.png") no-repeat 100%;*/
+    white-space: nowrap;
+}
+
+.iconlist
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a,a:link
+{
+    /*background: transparent;*/
+    text-decoration: none;
+    color: #666666;
+    cursor: pointer;
+}
+
+a:link, a:visited
+{
+    color: #666666;
+}
+
+a:hover
+{
+    color: #0F4D92;
+	text-decoration:underline;
+}
+
+
+a:active
+{
+    color: #069;
+} 
+	
+/*/////////////////////////////////////////////////////////////
+/Whole  Body///////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+body
+{
+	width: 90%;
+	max-width:1300px;
+	min-width:900px;
+	height: 100%;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 13px;
+	font-size: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content-wrap /*holds left column and content body column*/
+{
+    position: relative;
+    width: 100%;
+    min-width: 800px;
+    overflow: auto;
+}
+
+/*/////////////////////////////////////////////////////////////
+/Left Pane ////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+
+#navactpane
+{
+    float: left;
+    width:17%;
+    max-width: 200px;
+    border-top: 0px solid #999;
+    padding-bottom: 40px;
+    margin-left:3px;
+}
+
+.leftpaneimage {
+	max-width:200px;
+	height:auto;
+	width: 98%;
+}
+
+.leftpanelbox
+{
+    float:left;
+    margin-top:25px;
+	width:100%; /*changed to accomodate action panel*/
+}
+
+#ServiceDescription.leftpanelbox, #ServiceDescription:p 
+{
+	line-height: 1.1;
+	margin-bottom: 5px;
+}
+
+#ServiceDescription ul
+{
+	list-style-type:circle;
+	margin-bottom:14px;
+}
+
+#ServiceDescription li 
+{
+	list-style-type:circle;
+	margin-bottom: 4px;
+}
+
+#ServiceDescription p
+{
+	list-style-type:circle;
+	margin-bottom: 14px;
+}
+
+.desctext
+{
+	line-height: 1.1;
+	margin-bottom: 5px;
+	list-style-type: circle;
+}
+
+
+
+#servicelogo 
+	{
+	max-width: 200px;
+	width:100%;
+	height: auto;
+}
+
+
+
+
+/*/////////////////////////////////////////////////////////////
+/Main Center (right) Column////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+
+#content /*body content column*/
+{
+    float:right;
+    width:79%;
+	margin-left:3%;
+    min-width:160px;
+}
+
+
+
+/*/////////////////////////////////////////////////////////////
+/ Layout - Footer//////////////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+#footer
+{
+    clear: both;
+    border-top: 1px solid #E3E8EE;
+    font-size: 86%;
+    color: #999;
+    text-align: left;
+    margin-top: 40px;
+    display:block;
+    background: #0F4D92;
+    height: auto;
+    min-height: 60px;
+}
+
+#footer a:link
+{
+    color: #999;
+}
+
+.footer-text-item
+{
+    text-align:left;
+    margin-left: 20px;
+}
+
+#minilogoimg 
+	{
+	float: left;
+	max-width: 82px;
+	height: auto;
+	}
+	
+#minilogo {
+	
+}
+
+#footerlinks a, #footerlinks a:visited, #footerlinks a:link
+{
+	color: white;
+	text-decoration: none;
+	font-family:verdana,arial,helvetica,sans-serif;
+}
+
+#footerlinks
+{
+    float: left;
+    color: White;
+    vertical-align: bottom;
+    text-decoration: none;
+    font-size: 12px;
+	padding-top: 24px;
+}
+
+/*/////////////////////////////////////////////////////////////
+/ Layout - Header//////////////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+
+#sitelogo
+{
+    height:auto;
+    width:100%;
+    max-width:200px;
+    float: left;
+}
+
+#header
+{
+	background: #0F4D92;
+	height: 63px; 
+	width: 100%;
+	margin: 5px 0 25px 0;
+    padding: 0px 0 0 2px;
+}
+
+#header #sitelogo
+{
+	height: auto;
+	width:100%;
+	max-width: 240px;
+}
+	
+/*/////////////////////////////////////////////////////////////
+/Search////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+#search
+{
+    color: #FFFFFF;
+    font-weight: bold;
+    position: relative;
+	margin-top: 15px;
+	margin-right: 15px;
+    float:right;
+}
+
+#search form
+{
+    margin: 0 0 5px 0;
+}
+
+#search input.f-criteria
+{
+    width: 8em;
+    margin: 0 0 -1px;
+    height: 1.6em;
+}
+
+#search label
+{
+    padding: 5px 0 0;
+    display: inline;
+}
+
+#search input.f-submit
+{
+    width: auto;
+    font-size: 81%;
+    margin: 0 0 -.15em;
+    height: 1.95em;
+}
+
+#search #searchType input
+{
+    height: 1.2em;
+}
+
+#search #searchType label
+{
+    font-weight: normal;
+	font-size: 11px;
+    font-size: 0.85rem;
+    padding: 0px 0 0 5;
+	color:#999;
+}
+
+/*/////////////////////////////////////////////////////////////
+/ Buttons and Links////////////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+
+.emphbuttonlike{
+  background: #0090D2 !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(.2, #52a8e8), color-stop(1, #2e76cf)) !important;
+  background: -moz-linear-gradient(center top, #52a8e8 20%, #2e76cf 100%) !important;
+  color: #FFFFFF !important;
+  border: 1px solid #4081af;
+  border-bottom-color: #20559a;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-family:Arial, sans-serif;
+    margin: 15px 5px 0 5px;
+    width: 96%;
+  padding: 15px;
+}
+
+ul.ReqMenuLinks li.emphbuttonlike a:link
+{
+    color: #1C62A8;
+    font-weight: bold;
+}
+
+ul.ReqMenuLinks li.emphbuttonlike a:visited
+{
+    color: #1C62A8;
+    font-weight: bold;
+}
+
+.buttonlike{
+  background: #eee;
+  border: 1px solid #aaa;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  -moz-border-radius: .25em;
+  -webkit-border-radius: .25em;
+  border-radius: .25em;
+  color: #444;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, .75);
+  cursor: pointer;
+  margin-bottom: 1.25em;
+  font-family: Arial, sans-serif;
+    margin: 15px 5px 0 5px;
+    width: 96%;
+}
+
+.narrowbuttonlike{
+  background: #eee;
+  border: 1px solid #aaa;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  -moz-border-radius: .25em;
+  -webkit-border-radius: .25em;
+  border-radius: .25em;
+  color: #444;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, .75);
+  cursor: pointer;
+  margin-bottom: 1.25em;
+  font-family: Arial, sans-serif;
+    margin: 15px 5px 0 5px;
+    width: 250px;
+}
+
+
+ul.ReqMenuLinks a:link, a:visited
+{
+    color: #1C62A8;
+	line-height: 1.8em;
+}
+
+ul.ReqMenuLinks a:hover /*why I had to break this apart from the above I'm not sure*/
+{
+    color: #0F4D92;
+	text-decoration:underline;
+	line-height: 1.8em;
+}
+
+.emphbutton{
+  background: #0090D2 !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(.2, #52a8e8), color-stop(1, #2e76cf));
+  background: -moz-linear-gradient(center top, #52a8e8 20%, #2e76cf 100%);
+  border: 1px solid #4081af;
+  border-bottom-color: #20559a;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+  color: #ffffff !important;
+  display: inline-block;
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer;
+  font-family:Arial, sans-serif;
+  margin: 15px 5px 0 5px;
+}
+
+.emphsubbutton{ /*for left justified form submission with no left padding*/
+  background: #0090D2;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(.2, #52a8e8), color-stop(1, #2e76cf));
+  background: -moz-linear-gradient(center top, #52a8e8 20%, #2e76cf 100%);
+  border: 1px solid #4081af;
+  border-bottom-color: #20559a;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 0 2px rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.29);
+  color: #ffffff !important;
+  display: inline-block;
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer;
+  font-family:Arial, sans-serif;
+  margin: 20px 0px 0px 0px;
+}
+
+.greybutton{
+  background: #eee;
+  border: 1px solid #aaa;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  -moz-border-radius: .25em;
+  -webkit-border-radius: .25em;
+  border-radius: .25em;
+  color: #444;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, .75);
+  cursor: pointer;
+  margin-bottom: 1.25em;
+  font-family: Arial, sans-serif;
+  margin: 15px 5px 0 5px !important;
+  width: 96% !important;
+}
+
+#FormMenuActions li
+{
+    text-align: left;
+    padding-left: 0;
+    width: 100%;
+}
+
+
+
+/*/////////////////////////////////////////////////////////////
+/* Unified Request Form////////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+
+.hidingform
+{
+    display:none;
+}
+
+#requesttypeselection .listemph {
+	border-bottom: none;
+    font-family: arial,verdana,sans-serif;
+    font-size:17px;
+	font-size: 1.3rem;
+    line-height: 2em;
+    letter-spacing:normal;
+    margin: 10px 0 0 6px;
+    padding-bottom: 0.1em;
+}
+
+#requesttypeselection .listdesc {
+	border-bottom: none;
+    color: #606373;
+    font-family: arial,verdana,sans-serif;
+	font-size:16px;
+    font-size: 1.2rem;
+    line-height: 2em;
+    letter-spacing:normal;
+    margin: 10px 0 0 6px;
+    padding-bottom: 0.1em;
+}
+
+form label {
+    color: #333333;
+    display: block;
+    margin-bottom: 3px;
+}
+
+form .smallnote {
+    color: #888888;
+	font-size: 11px;
+    font-size: .846rem;
+    margin-top: 3px;
+}
+
+.fullinput {
+	width: 100%;
+}
+
+.halfinput {
+	width: 50%;
+}
+
+.ltwothirdsfield {
+	float: left;
+	margin-right: 20px;
+	width: 65%;
+}
+
+.ronethirdfield {
+	float: right;
+	width: 26%;
+}
+
+.lfield 
+{
+	float:left;
+	margin-right: 20px;
+	width: 45%;
+}
+
+.rfield 
+{
+    float:left;
+	width: 45%;
+}
+
+.lfield2
+{
+	float:left;
+	margin-top:10px;
+	margin-right: 20px;
+	width: 45%;
+}
+
+.rfield2
+{
+    float:left;
+    margin-top:10px;
+	width: 45%;
+}
+
+fieldset
+	{
+	border: 1px solid #CCCCCC;
+	padding: 10px;
+	margin-bottom: 15px;
+	}
+	
+input[type=text] , input[type=select] , input[type=submit] , input[type=reset] {
+    border: 1px solid #BBBBBB;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px #DDDDDD inset;
+    color: #111111;
+    font-size: 1em;
+    margin: 0;
+    padding: 5px;
+}
+
+textarea {
+	border: 1px solid #BBBBBB;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px #DDDDDD inset;
+    color: #111111;
+    font-size: 1em;
+    margin: 0;
+    padding: 5px;
+}
+
+.lfieldlist
+{
+	float:left;
+	margin-top:10px;
+	margin-right: 20px;
+	width: 45%;
+}
+
+/*/////////////////////////////////////////////////////////////
+/* Scan and Deliver Form///////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+
+#specreqs td
+{
+	font-size:13px;
+	vertical-align: top;
+	padding-left:20px;
+	padding-top:5px;
+}
+
+/*///////////////////////////////////////////////////////////////
+/*Unified Request form's on-off switch - proto.io/freebies/onoff/
+//////////////////////////////////////////////////////////////*/
+
+.onoffswitch {
+    position: relative; width: 212px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 0px;
+}
+.onoffswitch-inner {
+    width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    float: left; width: 50%; height: 32px; padding: 0; line-height: 28px;
+    font-size: 16px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+.onoffswitch-inner:before {
+    content: "Click to Show or Hide";
+    padding-left: 21px;
+    background-color: #2FCCFF; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "Click to Show or Hide";
+    padding-right: 21px;
+    background-color: #2FCCFF; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    width: 5px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0; right: 207px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+/*/////////////////////////////////////////////////////////////
+/* DEFAULT TABLE //////////////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+
+.default-table
+{
+    width: 100%;
+}
+
+.default-table table
+{
+    border: 0px solid #000066;
+	font: 13px verdana, arial, geneva, sans-serif;
+    font: 1rem verdana, arial, geneva, sans-serif;
+    border-collapse: collapse;
+}
+
+.default-table tbody td
+{
+    font-size: 13px;
+	font-size: 1rem; 
+}
+
+.default-table tbody td, th
+{
+    border-left: 0px solid #000066;
+    padding: 5px;
+}
+
+.default-table thead tr
+{
+    background: #efefef;
+    color: #000;
+}
+
+.default-table thead tr.row-header
+{
+    background: #0F4D92;
+    color: #fff;
+}
+
+.default-table thead tr.row-headings
+{
+    border-bottom: 1px solid #000066;
+}
+
+.default-table thead th
+{
+    padding: 5px 5px;
+    text-align: left;
+    font-size: 110%;
+}
+
+.default-table tbody th
+{
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+    font-size: 110%;
+    color: #fff;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+.default-table tbody tr.row-odd th
+{
+    background: #ffffff;
+	border-bottom: 1px dotted #CCCCCC;
+}
+
+.default-table tbody tr.row-odd
+{
+    background: #ffffff;
+	border-bottom: 1px dotted #CCCCCC;
+}
+
+.default-table tbody tr th
+{
+    background: #ffffff;
+	border-bottom: 1px dotted #CCCCCC;
+}
+
+.default-table tbody tr
+{
+    background: #ffffff;
+	border-bottom: 1px dotted #CCCCCC;;
+}
+
+.default-table tfoot th, tfoot td
+{
+    margin: 0;
+    border-top: 2px solid #fff;
+    padding: 5px 10px;
+    text-align: left;
+    background: #F8F12A;
+    color: #000;
+}
+
+.default-table tfoot th
+{
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border: none;
+}
+
+.default-table tfoot td
+{
+    padding-left: 10px;
+}
+
+.default-table a, .default-table a:link, .default-table a:visited
+{
+    color: 1C62A8;
+	/*text-decoration: underline;*/
+}
+
+/*/////////////////////////////////////////////////////////////
+/* Transaction Menu ///////////////////////////////////////////
+/////////////////////////////////////////////////////////////*/
+	
+#transactionMenu
+{
+    border-top: 5px solid #999;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: .5em;
+    width: 100%;
+}
+
+#transactionMenu a:link, #transactionMenu a:visited
+{
+    color: #c00;
+    font-weight: bold;
+    line-height: 2em;
+    padding: .3em;
+}
+
+#transactionMenu a:hover, #transactionMenu a:active
+{
+    background-color: #efefef;
+}
+
+#transactionMenu .separator
+{
+    color: ccc;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#transactionMenu .noActionMessage
+{
+    color: #999;
+    font-weight: normal;
+    line-height: 2em;
+    padding: .3em;
+}
