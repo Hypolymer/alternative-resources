@@ -1,6 +1,7 @@
    <?php
 
    require_once('vendor/autoload.php');
+   include('returnError.php');
 
    $configFile = "appConfig.ini";
    $ini_array = parse_ini_file ($configFile);
@@ -16,7 +17,7 @@
    $wskey = new WSKey($key, $secret, $options);
    $accessToken = $wskey->getAccessTokenWithClientCredentials($institution_id, $institution_id);
 
-   $bib = Bib::Find(586757123, $accessToken);
+   //$bib = Bib::Find(586757123, $accessToken);
 
    if (is_a($bib, 'WorldCat\Discovery\Error')) 
    {
