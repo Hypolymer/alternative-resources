@@ -97,11 +97,11 @@
         $xml->getName() => $propertiesArray
     );
 }
-	
-	
-	
-	
-	$response_xml_data = file_get_contents("http://experimental.worldcat.org/recommender/MLT/978-0316769532?inst=YGM&count=10");
+	$query = $_GET["num"];
+
+	//$query = 287628;
+	//$query = http_build_query($passedQuery, '', "&");
+	$response_xml_data = file_get_contents("http://experimental.worldcat.org/recommender/MLT/" . $query . "?inst=YGM&count=10");
     if($response_xml_data)
     {
       // echo "read";
