@@ -1,8 +1,4 @@
    <?php
-
-   class test extends holdingsFinder {
-   
-   function tester (){
    
    require_once('vendor/autoload.php');
 
@@ -22,33 +18,7 @@
 
    $bib = Bib::Find(586757123, $accessToken);
 
-   
-$xml = new SimpleXMLElement(
-'<person>
- <child role="son">
-  <child role="daughter"/>
- </child>
- <child role="daughter">
-  <child role="son">
-   <child role="son"/>
-  </child>
- </child>
-</person>');
-
-foreach ($xml->children() as $second_gen) {
-    echo ' The person begot a ' . $second_gen['role'];
-
-    foreach ($second_gen->children() as $third_gen) {
-        echo ' who begot a ' . $third_gen['role'] . ';';
-
-        foreach ($third_gen->children() as $fourth_gen) {
-            echo ' and that ' . $third_gen['role'] .
-                ' begot a ' . $fourth_gen['role'];
-        }
-    }
-}
-
-   
+    
    if (is_a($bib, 'WorldCat\Discovery\Error')) {
        echo $bib->getErrorCode();
        echo $bib->getErrorMessage();
@@ -89,8 +59,6 @@ foreach ($xml->children() as $second_gen) {
 }
       }
 	  require 'getHoldings.php';
-	  holdingsFinder->getHoldings(9780439023528);
+	 // holdingsFinder->getHoldings(9780439023528);
 	  
-}
-}
 ?>
