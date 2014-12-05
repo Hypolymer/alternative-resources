@@ -43,6 +43,7 @@ else
     if (count($offers) > 0)
     {
         logMessage("We own item with oclc number $oclcnumber - terminating" . __FUNCTION__ . " in " . __FILE__ . " at line " . __LINE__);
+        echo ("We own item with oclc number $oclcnumber <br />");
         //exit(0);
     }
     else
@@ -68,20 +69,41 @@ else
     $creativeWork = $response2->getCreativeWorks();
     $creativeWork = $creativeWork[0];
     $workID = $creativeWork->getWork()->getURI();
-    echo $workID;
-    echo count($offers);
-    foreach($offers as $offer)
+/*  foreach($offers as $offer)
     {
 	    echo $offer->getSeller()->getName();
         echo "</br>";
-    }
+    }*/
 }
 
-echo $workID;
+//echo $workID;
 
-$workDetails = json_decode(file_get_contents($workID . ".jsonld"));
-var_dump($workDetails);
-echo $workDetails->workExample;
-
+$workDetails = json_decode(str_replace("@","",file_get_contents($workID . ".jsonld")));
+//var_dump($workDetails);
+//echo count($workDetails->graph);
+$commandIndex = (count($workDetails->graph) - 1);
+echo $commandIndex;
+$oclcnAlternatives = preg_replace('/^.*\/\s*/', '', $workDetails->graph[$commandIndex]->workExample);
+foreach($oclcnAlternatives as $oclcnAlternative)
+{
+    echo $oclcnAlternative;
+    echo "</br>";
+}
+echo $accessToken->getValue();
+/*
+$guzzleOptions = static::getGuzzleOptions(array('accessToken' => $accessToken, 'logger' => $logger));
+        
+        $bibURI = Bib::$serviceUrl . '/offer/oclc/' . $id . '?' . static::buildParameters(null, $requestOptions);
+        
+        try {
+            $response = \Guzzle::get($bibURI, $guzzleOptions);
+            $graph = new EasyRdf_Graph();
+            $graph->parse($response->getBody(true));
+            $results = $graph->allOfType('discovery:SearchResults');
+            return $results[0];
+        } catch (\Guzzle\Http\Exception\BadResponseException $error) {
+            return Error::parseError($error);
+        }
+*/
 ?>
 

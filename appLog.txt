@@ -152,3 +152,91 @@
 2014-12-04 21:10:48  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
 2014-12-04 21:10:50  1
 2014-12-04 21:10:50  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:03:37  1
+2014-12-05 02:03:37  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:04:49  1
+2014-12-05 02:04:49  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:05:21  1
+2014-12-05 02:05:21  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:06:00  1
+2014-12-05 02:06:00  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:06:39  1
+2014-12-05 02:06:39  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:10:26  1
+2014-12-05 02:10:26  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:12:27  1
+2014-12-05 02:12:27  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:13:20  1
+2014-12-05 02:13:20  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:13:37  1
+2014-12-05 02:13:37  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:15:06  1
+2014-12-05 02:15:06  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:16:38  1
+2014-12-05 02:16:38  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:19:52  1
+2014-12-05 02:19:52  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:20:00  1
+2014-12-05 02:20:00  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:20:46  1
+2014-12-05 02:20:46  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:22:04  1
+2014-12-05 02:22:04  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:22:18  1
+2014-12-05 02:22:18  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:30:17  1
+2014-12-05 02:30:17  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:33:04  1
+2014-12-05 02:33:04  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:54:12  1
+2014-12-05 02:54:12  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 02:55:10  1
+2014-12-05 02:55:10  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 03:02:25  1
+2014-12-05 03:02:25  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 04:41:07  1
+2014-12-05 04:41:07  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 04:42:46  1
+2014-12-05 04:42:46  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 05:27:14  1
+2014-12-05 05:27:14  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 05:29:42  1
+2014-12-05 05:29:42  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 05:31:02  1
+2014-12-05 05:31:02  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 05:46:46  10
+2014-12-05 05:46:46  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 05:49:45  10
+2014-12-05 05:49:45  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 05:51:51  10
+2014-12-05 05:51:51  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 05:54:12  10
+2014-12-05 05:54:12  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 05:55:16  9
+2014-12-05 05:55:16  We own item with oclc number 63400277 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 05:56:16  9
+2014-12-05 05:56:16  We own item with oclc number 63400277 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 05:58:08  9
+2014-12-05 05:58:08  We own item with oclc number 63400277 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 05:59:50  0
+2014-12-05 05:59:50  We do not own item with oclc number 63400277 so moving on. Logged by  in C:\wamp\www\oclc_dev_2\getAlternate.php at line 61
+2014-12-05 06:00:04  9
+2014-12-05 06:00:04  We own item with oclc number 63400277 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 06:00:14  0
+2014-12-05 06:00:14  We do not own item with oclc number 63400277 so moving on. Logged by  in C:\wamp\www\oclc_dev_2\getAlternate.php at line 61
+2014-12-05 06:00:29  9
+2014-12-05 06:00:29  We own item with oclc number 63400277 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 06:00:55  10
+2014-12-05 06:00:55  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 06:01:53  10
+2014-12-05 06:01:53  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 06:08:38  1
+2014-12-05 06:08:38  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 06:23:37  1
+2014-12-05 06:23:37  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 56
+2014-12-05 06:26:18  1
+2014-12-05 06:26:18  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 06:27:20  1
+2014-12-05 06:27:20  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45
+2014-12-05 06:28:43  1
+2014-12-05 06:28:43  We own item with oclc number 7977212 - terminating in C:\wamp\www\oclc_dev_2\getAlternate.php at line 45

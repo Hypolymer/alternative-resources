@@ -1,6 +1,7 @@
 *.ignore
 appConfig.ini
-vender/*
+vendor/
+appLog.txt
 *.lock
 *~
 *.log
