@@ -6,9 +6,8 @@
     }
     function returnError($type,$message)
     {
-        echo $type;
-        echo "</br>";
-        echo $message;
+        $msg = "Type: $type | Message: $message";
+        logMessage($msg);
     }
 
 ?>
