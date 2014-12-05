@@ -31,7 +31,7 @@ $( "#accordion" ).accordion({
                                 <span class="req">*</span>
                             </span>
                         </label>
-                        <input class="fullinput" id="LoanTitle" name="LoanTitle" type="text" size="40" class="f-name"  value=""><br />
+                        <input class="fullinput" id="LoanTitle" name="LoanTitle" type="text" size="40" class="f-name"  value="" onblur="sendNewBibRecommend()"><br />
                     </div>
                     <div class="rfield">
                         <label for="LoanAuthor">
@@ -40,7 +40,7 @@ $( "#accordion" ).accordion({
                                 <span class="req">*</span>
                             </span>
                         </label>
-                        <input class="fullinput" id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="">
+                        <input class="fullinput" id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="" onblur="sendNewBibRecommend()">
 						<br />
 						<span class="smallnote">LastName, FirstName</span>
                     </div>
@@ -66,27 +66,7 @@ $( "#accordion" ).accordion({
 						</div>
 						</div>
 						
-			<script>
 
-$.getJSON( "recommender.php", function( data ) {
-var html="";
-   $.each(data.mlt.likeItems.likeItem,
-      function(index,value){
-         html+= "<li>";
-		 html+= ['<a href="http://www.worldcat.org/oclc/']+value['@ocn']+['">'];
-		 html+= value['@title']+" ";
-		 html+= value['@author']+" ";
-		 html+= value['@pubDate'];
-		 html+= "</a>";
-		 html+= "</li>";
-		 
-      }
-   );
-
-   $('.result').html("<ul>"+html+"</ul>");
-   
-});
-	</script>
 	<script>
 function sendNewRecommend(){
 document.getElementById("stage").innerHTML = "";
@@ -120,7 +100,42 @@ var html="";
 
 
 </script>
-	
+
+<!--this script is to create recommendations based on title/author-->
+<script>
+function sendNewBibRecommend(){
+document.getElementById("stage").innerHTML = "";
+var searchTitleAuthor = "bibrecommender.php?bibsearch="+document.getElementById("LoanTitle").value+" "+document.getElementById("LoanAuthor").value;
+
+var number = $.get(searchTitleAuthor, function ( data ){
+
+var searchISBN = "recommender.php?num="+data;
+
+$.getJSON( searchISBN, function( data ) {
+var html="";
+   $.each(data.mlt.likeItems.likeItem,
+      function(index,value){
+         html+= "<li>";
+		 html+= ['<a href="http://www.worldcat.org/oclc/']+value['@ocn']+['">'];
+		 html+= value['@title']+" ";
+		 html+= value['@author']+" ";
+		 html+= value['@pubDate'];
+		 html+= "</a>";
+		 html+= "</li>";
+		 
+      }
+   );
+
+   $('.result').html("<ul>"+html+"</ul>");
+   
+
+
+})
+       .error(function(jqXHR, textStatus, errorThrown) { alert ("No Recommendations");
+	  })
+});
+};
+</script>	
 	
 	
 	
