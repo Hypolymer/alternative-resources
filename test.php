@@ -58,7 +58,7 @@
         echo "This ran </br>";
 }
       }
-	  require 'getHoldings.php';
+//	  require 'getHoldings.php';
 	 // holdingsFinder->getHoldings(9780439023528);
 	  
 ?>
