@@ -1,87 +1,83 @@
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="YaleMain.css" />
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-<script src="jquery-1.11.1.min.js"></script>
-<script src="js/recommender.js" type="text/javascript"></script>
+    <link href="YaleMain.css" rel="stylesheet" type="text/css">
+    <link href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"
+    rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="js/recommender.js" type="text/javascript"></script>
+    <script src="js/alternate.js" type="text/javascript"></script>
+    <script>
+        $(function() {
+            $( "#accordion" ).accordion({
+            heightStyle: "content"
+            });
+            });
+    </script>
 
-<script>
- $(function() {
-$( "#accordion" ).accordion({
-	heightStyle: "content"
-});
-});
-</script>
+    <title></title>
 </head>
+
 <body>
-<img src="DeveloperHouseBanner.png" alt="Jones Smith Banner" style="width:90%; display: block;
-    margin-left: auto;
-    margin-right: auto;
-	margin-bottom: 20px;"/>
-	<h1 style="text-align:center">Search for Alternative & Related Resources</h1>
-<div id="stockloanrequestfields">
+    <img alt="Jones Smith Banner" src="DeveloperHouseBanner.png" style=
+    "width:90%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px;">
 
+    <h1 style="text-align:center">Search for Alternative & Related
+    Resources</h1>
 
-                <fieldset>
-                    <legend>Basic Information</legend>
-                    <div class="lfield">
-                        <label for="LoanTitle">
-                            <span class="fieldleft">
-                                <span class="valid"><b>Title</b></span>
-                            </span>
-                        </label>
-                        <input class="fullinput" id="LoanTitle" name="LoanTitle" type="text" size="40" class="f-name"  value="" onblur="sendNewBibRecommend()"><br />
-                    </div>
-                    <div class="rfield">
-                        <label for="LoanAuthor">
-                            <span class="field">
-                                <span class="valid"><b>Author/Editors</b></span>
-                            </span>
-                        </label>
-                        <input class="fullinput" id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name"  value="" onblur="sendNewBibRecommend()">
-						<br />
-						<span class="smallnote">LastName, FirstName</span>
-                    </div>
-                    <br style="clear:both;" />
-                    <div class="lfield2">
-                        <label for="ISSN">
-                            <span class="field">
-                                <span class="valid"><b>ISBN (International Standard Book Number)</b></span><br />
-                            </span>
-                        </label>
-                        <input class="fullinput" id="ISSN" name="ISSN" type="text" size="20" class="f-name"  value="" onblur="sendNewRecommend()"><br />
-                        <span class="smallnote">If given will significantly speed request processing</span>
-                    </div>
-                    <div class="rfield2">
-                        <div class="ltwothirdsfield">
-                            <label for="LoanEdition">
-                                <span class="field">
-                                    <span class="valid"><b>Edition</b></span>
-                                </span>
-                            </label>
-                            <input class="fullinput" id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name"  value=""><br />
-                        </div>
-						</div>
-						</div>
-						
+    <div id="stockloanrequestfields">
+        <fieldset>
+            <legend>Basic Information</legend>
 
+            <div class="lfield">
+                <label for="LoanTitle"><span class="fieldleft"><span class=
+                "valid" style="font-weight: bold">Title</span></span></label>
+                <input class="f-name" id="LoanTitle" name="LoanTitle" onblur=
+                "sendNewBibRecommend()" size="40" type="text" value=""><br>
+            </div>
 
-	
-	
-	
-	<div id="accordion">
-	<h3>Alternate Editions</h3>
-		<div>
-		</div>
-	<h3>Recommendations</h3>
-		<div class="result" id="stage">
+            <div class="rfield">
+                <label for="LoanAuthor"><span class="field"><span class="valid"
+                style="font-weight: bold">Author/Editors</span></span></label>
+                <input class="f-name" id="LoanAuthor" name="LoanAuthor" onblur=
+                "sendNewBibRecommend()" size="40" type="text" value=""><br>
+                <span class="smallnote">LastName, FirstName</span>
+            </div><br style="clear:both;">
 
-		</div>
+            <div class="lfield2">
+                <label for="ISSN"><span class="field"><span class="valid"
+                style="font-weight: bold">OCLC Number</span><br></span></label> <input class="f-name" id=
+                "ISSN" name="ISSN" onblur="sendNewRecommend()" size="20" type=
+                "text" value=""><br>
+                <span class="smallnote">If given will significantly speed request processing</span>
+            </div>
 
-	</div>
+            <div class="rfield2">
+                <div class="ltwothirdsfield">
+                    <label for="LoanEdition"><span class="field"><span class=
+                    "valid" style=
+                    "font-weight: bold">Edition</span></span></label>
+                    <input class="f-name" id="LoanEdition" name="LoanEdition"
+                    size="40" type="text" value=""><br>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <button class="emphbutton" onclick="sendNewBibRecommend()">Suggest!</button>
+    <!--<button class="emphbutton" onclick="updateAlt()">Find Alternates!</button>-->
 
-	
+    <div id="accordion">
+        <h3>Alternate Editions</h3>
+
+        <div id="alternatePane">
+                <h3>Practice Text</h3>
+        </div>
+
+        <h3>Recommendations</h3>
+
+        <div class="result" id="stage"></div>
+    </div>
 </body>
 </html>
