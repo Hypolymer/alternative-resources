@@ -22,6 +22,7 @@ function sendNewRecommend() {
 }
 //<!--this script is to create recommendations based on title/author-->
 function sendNewBibRecommend() {
+    updateAlt();
     document.getElementById("stage").innerHTML = "";
     var searchTitleAuthor = "bibrecommender.php?bibsearch=" + document.getElementById(
             "LoanTitle").value + " " + document.getElementById("LoanAuthor")
