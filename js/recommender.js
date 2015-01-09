@@ -28,7 +28,7 @@ function sendNewBibRecommend() {
         .value;
     var number = $.get(searchTitleAuthor, function(data) {
         var searchISBN = "recommender.php?num=" + data;
-        alert(data)
+        //alert(data)
         updateAlt(data);
         $.getJSON(searchISBN, function(data) {
             var html = "";
