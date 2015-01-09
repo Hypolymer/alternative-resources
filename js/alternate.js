@@ -1,6 +1,8 @@
-function updateAlt() {
+function updateAlt($altNum) {
     $("#alternatePane").empty();
-    var url = "getAlternate.php?num=" + document.getElementById("ISSN").value;
+    var url = "getAlternate.php?num=" + $altNum;
+
+    alert(url);
 
     $.getJSON(url, function (data) {
         var html = "";

@@ -22,13 +22,14 @@ function sendNewRecommend() {
 }
 //<!--this script is to create recommendations based on title/author-->
 function sendNewBibRecommend() {
-    updateAlt();
     document.getElementById("stage").innerHTML = "";
     var searchTitleAuthor = "bibrecommender.php?bibsearch=" + document.getElementById(
             "LoanTitle").value + " " + document.getElementById("LoanAuthor")
         .value;
     var number = $.get(searchTitleAuthor, function(data) {
         var searchISBN = "recommender.php?num=" + data;
+        alert(data)
+        updateAlt(data);
         $.getJSON(searchISBN, function(data) {
             var html = "";
             $.each(data.mlt.likeItems.likeItem, function(
