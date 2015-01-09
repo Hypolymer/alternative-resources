@@ -1,5 +1,5 @@
 <?php
-   
+
 /*Encourage selection of items that are more widely available than the one presently selected*/
 
 include ('returnError.php');
@@ -13,13 +13,13 @@ $oclcnumber = $_GET["num"];
 use OCLC\Auth\WSKey;
 use OCLC\Auth\AccessToken;
 use WorldCat\Discovery\Offer;
-	
+
 $configFile = "appConfig.ini";
 $ini_array = parse_ini_file ($configFile);
-   
+
 $holdingsList = "holdingsList.ini";
 $ini_holdings = parse_ini_file($holdingsList);
- 
+
 $key = $ini_array["key"];
 $secret = $ini_array["secret"];
 $institution_id = $ini_array["institution_id"];
@@ -149,4 +149,3 @@ while($i < $t)
 echo json_encode($requestables);
 // echo $accessToken->getValue();
 ?>
-
