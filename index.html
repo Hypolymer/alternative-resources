@@ -2,8 +2,7 @@
 <html>
 <head>
     <link href="YaleMain.css" rel="stylesheet" type="text/css">
-    <link href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"
-    rel="stylesheet">
+    <link href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script src="jquery-1.11.1.min.js"></script>
@@ -33,14 +32,14 @@
 
             <div class="lfield">
                 <label for="LoanTitle"><span class="fieldleft"><span class=
-                "valid" style="font-weight: bold">Title</span></span></label>
+                "valid" style="font-weight: bold">Title</span><br></span></label>
                 <input class="f-name" id="LoanTitle" name="LoanTitle" onblur=
                 "sendNewBibRecommend()" size="40" type="text" value=""><br>
             </div>
 
             <div class="rfield">
                 <label for="LoanAuthor"><span class="field"><span class="valid"
-                style="font-weight: bold">Author/Editors</span></span></label>
+                style="font-weight: bold">Author/Editors</span><br></span></label>
                 <input class="f-name" id="LoanAuthor" name="LoanAuthor" onblur=
                 "sendNewBibRecommend()" size="40" type="text" value=""><br>
                 <span class="smallnote">LastName, FirstName</span>
@@ -48,31 +47,27 @@
 
             <div class="lfield2">
                 <label for="ISSN"><span class="field"><span class="valid"
-                style="font-weight: bold">OCLC Number</span><br></span></label> <input class="f-name" id=
-                "ISSN" name="ISSN" onblur="sendNewRecommend()" size="20" type=
-                "text" value=""><br>
-                <span class="smallnote">If given will significantly speed request processing</span>
+                style="font-weight: bold">OCLC Number</span><br></span></label> <input id="ISSN" name="ISSN" onblur="sendNewRecommend()" size="20" type="text" value="36988457"><br>
             </div>
 
             <div class="rfield2">
                 <div class="ltwothirdsfield">
                     <label for="LoanEdition"><span class="field"><span class=
                     "valid" style=
-                    "font-weight: bold">Edition</span></span></label>
+                    "font-weight: bold">Edition</span><br></span></label>
                     <input class="f-name" id="LoanEdition" name="LoanEdition"
                     size="40" type="text" value=""><br>
                 </div>
             </div>
         </fieldset>
     </div>
-    <button class="emphbutton" onclick="sendNewBibRecommend()">Suggest!</button>
+    <button class="emphbutton" onclick="sendNewBibRecommend()">Suggest!</button> <br /><br />
     <!--<button class="emphbutton" onclick="updateAlt()">Find Alternates!</button>-->
 
     <div id="accordion">
         <h3>Alternate Editions</h3>
 
         <div id="alternatePane">
-                <h3>Practice Text</h3>
         </div>
 
         <h3>Recommendations</h3>
