@@ -1,3 +1,6 @@
+//This code is used to connect to the OCLC Discovery API to translate a title/author search into an OCLC number
+//By default, the function brings back 10 results.  A break has been put into place to retrieve the first result.
+
 <?php	
 	require_once('vendor/autoload.php');
 
@@ -17,20 +20,17 @@
 	
 	$bib = "";
 	
-	
 	$query = $_GET["bibsearch"];
-$results = Bib::Search($query, $accessToken);
-if (is_a($bib, 'WorldCat\Discovery\Error')) {
-   echo $results->getErrorCode();
-   echo $results->getErrorMessage();
-} else {
-   foreach ($results->getSearchResults() as $bib){
-      echo $bib->getOCLCNumber()->getValue();
-	  //remove this break to get back ten OCLC #s instead of only one
-	  break;
-   }
+	$results = Bib::Search($query, $accessToken);
+	if (is_a($bib, 'WorldCat\Discovery\Error')) {
+   		echo $results->getErrorCode();
+   		echo $results->getErrorMessage();
+	} else {
+   	foreach ($results->getSearchResults() as $bib){
+      		echo $bib->getOCLCNumber()->getValue();
+	  	//remove this break to get back ten OCLC #s instead of only one
+	  	break;
+   		}
 
-}
-
-
+	}
 ?>
