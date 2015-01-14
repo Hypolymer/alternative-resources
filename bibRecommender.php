@@ -1,7 +1,8 @@
-//This code is used to connect to the OCLC Discovery API to translate a title/author search into an OCLC number
-//By default, the function brings back 10 results.  A break has been put into place to retrieve the first result.
+<?php
 
-<?php	
+	//This code is used to connect to the OCLC Discovery API to translate a title/author search into an OCLC number
+	//By default, the function brings back 10 results.  A break has been put into place to retrieve the first result.
+	
 	require_once('vendor/autoload.php');
 
 	use OCLC\Auth\WSKey;
