@@ -1,4 +1,6 @@
 *.ignore
+.idea/
+.idea/*
 appConfig.ini
 vendor/
 vendor/*
