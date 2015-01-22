@@ -3,10 +3,12 @@
 <head>
     <link href="css/YaleMain.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="js/recommender.js" type="text/javascript"></script>
     <script src="js/alternate.js" type="text/javascript"></script>
+    <script src="js/spin.min.js" type="text/javascript"></script>
+    <script src="js/plugins.js" type="text/javascript"></script>
     <script>
         $(function() {
             $( "#accordion" ).accordion({
@@ -61,14 +63,17 @@
     <!--<button class="emphbutton" onclick="updateAlt()">Find Alternates!</button>-->
 
     <div id="accordion">
-        <h3>Alternate Editions</h3>
-
-        <div id="alternatePane">
-        </div>
 
         <h3>Recommendations</h3>
-
         <div class="result" id="stage"></div>
+
+        <h3>Alternate Editions</h3>
+        <div id="alternatePane"></div>
+
     </div>
+
+    <script>
+//        $('#stockloanrequestfields').spin('large','#000');
+    </script>
 </body>
 </html>

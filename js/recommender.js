@@ -22,6 +22,8 @@ function sendNewRecommend() {
 }
 //<!--this script is to create recommendations based on title/author-->
 function sendNewBibRecommend() {
+  //we've begun so call the spinner
+  $('#stockloanrequestfields').spin('large','#000');
   var inputOCLCN = document.getElementById("ISSN").value;
   console.log(inputOCLCN);
   if (inputOCLCN == "" || inputOCLCN == null)
@@ -36,6 +38,8 @@ function sendNewBibRecommend() {
         //alert(data)
         updateAlt(data);
         $.getJSON(searchISBN, function(data) {
+            //we're back, stop the spinner and start presenting data
+            $('#stockloanrequestfields').spin(false);
             var html = "";
             $.each(data.mlt.likeItems.likeItem, function(
                 index, value) {
@@ -51,6 +55,8 @@ function sendNewBibRecommend() {
             });
             $('.result').html("<ul>" + html + "</ul>");
         }).error(function(jqXHR, textStatus, errorThrown) {
+            //make sure to stop the loading indicator even in the event of error
+            $('#stockloanrequestfields').spin(false);
             alert("No Recommendations");
         });
     });
