@@ -1,6 +1,6 @@
 function updateAlt($altNum) {
     $("#alternatePane").empty();
-    var url = "getAlternate.php?num=" + $altNum;
+    var url = "alternate_recommender/getAlternate.php?num=" + $altNum;
 
     //alert(url);
 

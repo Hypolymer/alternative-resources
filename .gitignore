@@ -6,3 +6,6 @@ appLog.txt
 *.lock
 *~
 *.log
+alternate_recommender/vendor/
+alternate_recommender/vendor/*
+alternate_recommender/appConfig.ini

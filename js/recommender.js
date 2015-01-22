@@ -1,7 +1,7 @@
 function sendNewRecommend() {
     updateAlt();
     document.getElementById("stage").innerHTML = "";
-    var searchISBN = "recommender.php?num=" + document.getElementById(
+    var searchISBN = "alternate_recommender/recommender.php?num=" + document.getElementById(
         "ISSN").value;
 
     $.getJSON(searchISBN, function(data) {
@@ -28,11 +28,11 @@ function sendNewBibRecommend() {
     {
     console.log("No OCLC Number provided, do a title author search");
     document.getElementById("stage").innerHTML = "";
-    var searchTitleAuthor = "bibrecommender.php?bibsearch=" + document.getElementById(
+    var searchTitleAuthor = "alternate_recommender/bibrecommender.php?bibsearch=" + document.getElementById(
             "LoanTitle").value + " " + document.getElementById("LoanAuthor")
         .value;
     var number = $.get(searchTitleAuthor, function(data) {
-        var searchISBN = "recommender.php?num=" + data;
+        var searchISBN = "alternate_recommender/recommender.php?num=" + data;
         //alert(data)
         updateAlt(data);
         $.getJSON(searchISBN, function(data) {
@@ -60,7 +60,7 @@ function sendNewBibRecommend() {
       console.log("OCLCN provided, proceeding with that value");
       updateAlt(inputOCLCN);
 
-          var searchISBN = "recommender.php?num=" + inputOCLCN;
+          var searchISBN = "alternate_recommender/recommender.php?num=" + inputOCLCN;
           //alert(data)
           $.getJSON(searchISBN, function(data) {
               var html = "";
